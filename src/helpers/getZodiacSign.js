@@ -1,5 +1,7 @@
-function getZodiacSign(day, month, year) {
+function getZodiacSign(day, month) {
   const signs = [
+    "Aquarius",
+    "Pisces",
     "Aries",
     "Taurus",
     "Gemini",
@@ -10,40 +12,34 @@ function getZodiacSign(day, month, year) {
     "Scorpio",
     "Sagittarius",
     "Capricorn",
-    "Aquarius",
-    "Pisces",
   ];
 
   const changeDates = [
-    [20, 3],
+    [20, 1],
+    [19, 2],
+    [21, 3],
     [20, 4],
     [21, 5],
-    [22, 6],
+    [21, 6],
     [23, 7],
     [23, 8],
     [23, 9],
     [23, 10],
     [22, 11],
     [22, 12],
-    [20, 1],
-    [19, 2],
   ];
-  const daysInMonth = new Date(year, month, 0).getDate();
-  if (day > 1 || day < daysInMonth) {
-    for (let i = 0; i < changeDates.length; i++) {
-      if (
-        (month === changeDates[i][1] && day >= changeDates[i][0]) ||
-        (month === changeDates[(i + 1) % 12][1] &&
-          day < changeDates[(i + 1) % 12][0])
-      ) {
-        return signs[i];
-      }
-    }
-    return signs[11];
-  } else {
-    return "Please enter a valid date.";
-  }
-}
 
+  for (let i = 0; i < changeDates.length; i++) {
+    if (
+      (+month === changeDates[i][1] && +day >= changeDates[i][0]) ||
+      (+month === changeDates[(i + 1) % 12][1] &&
+        +day < changeDates[(i + 1) % 12][0])
+    ) {
+      return signs[i];
+    }
+  }
+
+  return "Please enter a valid date";
+}
 
 export default getZodiacSign;

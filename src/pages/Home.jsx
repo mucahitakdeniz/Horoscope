@@ -5,11 +5,11 @@ import React, { useState } from "react";
 import getZodiacSign from "../helpers/getZodiacSign";
 
 const Home = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <div>
       <Header setOpen={setOpen} />
-      <Main />-{" "}
+      <Main />
       {open && (
         <FindHoroscopeModal setOpen={setOpen} getZodiacSign={getZodiacSign} />
       )}

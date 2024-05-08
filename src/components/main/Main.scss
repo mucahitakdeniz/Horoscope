@@ -70,19 +70,25 @@
 }
 .modal {
   width: 30rem;
-  height: 15rem;
+  height: 20rem;
   border-radius: 2rem;
   padding: 2rem;
-  background-color: $modalColor; 
+  background-color: $modalColor;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 9;
+  h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 7rem;
+  }
 }
 
-button {
-  background-color: $modalColor; 
+.closeButton {
+  background-color: $modalColor;
   position: absolute;
   right: 2rem;
   top: 2rem;
@@ -101,18 +107,22 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
+  text-align: center;
   input {
     padding: 0.4rem;
     margin-left: 0.8rem;
   }
-  button {
-    background-color: $buttonColor;
-    font-size:1.5rem;
-    padding: 0.4rem;
-    border-radius: 0.6rem;
-    margin-top: 1rem;
-    &:hover{
-      background-color: $secondaryColor;
-    }
+}
+button {
+  background-color: $buttonColor;
+  font-size: 1.5rem;
+  padding: 0.4rem;
+  border-radius: 0.6rem;
+  margin-top: 2rem;
+  &:hover {
+    background-color: $secondaryColor;
   }
+}
+.horoscope{
+  text-align: center;
 }
