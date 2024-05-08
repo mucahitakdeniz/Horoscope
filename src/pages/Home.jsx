@@ -1,12 +1,14 @@
 import Header from "../components/header/Header";
+import FindHoroscopeModal from "../components/main/FindHoroscopeModal";
 import Main from "../components/main/Main";
-import React from "react";
+import React, { useState } from "react";
 
 const Home = () => {
+  const [open, setOpen] = useState(true);
   return (
     <div>
-      <Header />
-      <Main />
+      <Header setOpen={setOpen} />
+      <Main />- {open && <FindHoroscopeModal setOpen={setOpen} />}
     </div>
   );
 };
