@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
+import DailiyContainer from "../components/dailyHosorcope/DailiyContainer";
+import { data } from "../helpers/data";
 
 const Daily = () => {
-  return (
-    <div>Daily</div>
-  )
-}
+  return <DailiyContainer data={data} />;
+};
 
-export default Daily
+export default Daily;
