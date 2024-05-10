@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const DailyCommentCard = ({ dailyHoroscope }) => {
-  const URL = process.env.React_App_Api_Url;
+  const URL = process.env.REACT_APP_API_URL;
   const [info, setInfo] = useState({ horoscope: "" });
   const [day, setDay] = useState("today");
 
