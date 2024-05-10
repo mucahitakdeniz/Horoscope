@@ -6,26 +6,25 @@ const DailyCommentCard = ({ dailyHoroscope }) => {
   const [info, setInfo] = useState({ horoscope: "" });
   const [day, setDay] = useState("today");
 
-  const getHoroscope = async () => {
-    try {
-      const { data } = await axios.get(
-        `${URL}/${dailyHoroscope.toLowerCase()}/${day}/`
-      );
-      setInfo(data);
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-      alert("Something went wrong. Try again");
-    }
-  };
   useEffect(() => {
+    const getHoroscope = async () => {
+      try {
+        const { data } = await axios.get(
+          `${URL}/${dailyHoroscope.toLowerCase()}/${day}/`
+        );
+        setInfo(data);
+        console.log(data);
+      } catch (error) {
+        console.log(error);
+        alert("Something went wrong. Try again");
+      }
+    };
+
     getHoroscope();
   }, [dailyHoroscope, day]);
 
   return (
     <div className="daily-horoscope">
-      
-
       <h3>{dailyHoroscope}</h3>
       <p>{info.horoscope}</p>
       <div>
