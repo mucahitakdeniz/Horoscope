@@ -9,9 +9,6 @@ const Navbar = () => {
       <div className="links">
         <a href="/">Horoscope </a>
         <a href="/daily">Daily </a>
-        <a href="/tarot">Tarot </a>
-        <a href="/article">Article </a>
-        <a href="/contact">Contact </a>
       </div>
     </div>
   );
