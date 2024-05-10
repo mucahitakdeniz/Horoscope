@@ -4,8 +4,49 @@
   margin: auto;
   h2 {
     margin: auto;
-    margin-top: 5rem;
-    background-color: red;
-    width: 51rem;
+    margin-top: 10rem;
+    text-align: center;
+    font-size: 4rem;
+    &:hover {
+      color: $cardNavBgColor;
+    }
+  }
+}
+
+.daily-buttons {
+  margin: auto;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 5rem;
+  margin-top: 2rem;
+  button {
+    margin-left: 0.58rem;
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+  }
+}
+
+.daily-horoscope {
+  width: 40%;
+  min-width: 30rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 4rem $secondaryColor;
+  margin: auto;
+  padding: 2rem;
+  gap: 1rem;
+  text-align: justify;
+  div {
+    margin: auto;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  h3 {
+    text-align: center;
+    margin: 2rem;
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.5rem;
   }
 }
