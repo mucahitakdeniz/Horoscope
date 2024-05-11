@@ -10,7 +10,7 @@ const DailyCommentCard = ({ dailyHoroscope }) => {
     const getHoroscope = async () => {
       try {
         const { data } = await axios.get(
-          `https://any.ge/horoscope/api/?sign=aquarius&type=daily&day=today/`
+          `https://ohmanda.com/api/horoscope/${dailyHoroscope.toLowerCase()}`
         );
         // const { data } = await axios.get(
         //   `${URL}/${dailyHoroscope.toLowerCase()}/${day}/`
