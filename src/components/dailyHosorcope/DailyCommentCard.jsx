@@ -16,7 +16,7 @@ const DailyCommentCard = ({ dailyHoroscope }) => {
         console.log(data);
       } catch (error) {
         console.log(error);
-        alert("Apinin ücretsiz süresi doldu");
+        alert("Api free expired");
       }
     };
 
