@@ -10,16 +10,13 @@ const DailyCommentCard = ({ dailyHoroscope }) => {
     const getHoroscope = async () => {
       try {
         const { data } = await axios.get(
-          `https://ohmanda.com/api/horoscope/${dailyHoroscope.toLowerCase()}`
+          `${URL}/${dailyHoroscope.toLowerCase()}/${day}/`
         );
-        // const { data } = await axios.get(
-        //   `${URL}/${dailyHoroscope.toLowerCase()}/${day}/`
-        // );
         setInfo(data);
         console.log(data);
       } catch (error) {
         console.log(error);
-        alert("Something went wrong. Try again");
+        alert("Apinin ücretsiz süresi doldu");
       }
     };
 
